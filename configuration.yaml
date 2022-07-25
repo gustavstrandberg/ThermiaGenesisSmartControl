@@ -1,0 +1,41 @@
+template:
+  - sensor:
+    - name: "Thermia Atlas Total Power"
+      unique_id: thermia_atlas_total_power
+      state: >-
+        {{
+          [ states('sensor.thermia_atlas_l1_power'),
+            states('sensor.thermia_atlas_l2_power'),
+            states('sensor.thermia_atlas_l3_power'),
+          ] | map('int') | sum
+        }}
+      availability: >-
+        {{
+          [ states('sensor.thermia_atlas_l1_power'),
+            states('sensor.thermia_atlas_l2_power'),
+            states('sensor.thermia_atlas_l3_power'),
+          ] | map('is_number') | min
+        }}
+      unit_of_measurement: W
+      device_class: energy
+      state_class: measurement
+
+    - name: "Thermia Atlas Total Energy"
+      unique_id: thermia_atlas_total_energy
+      state: >-
+        {{
+          [ states('sensor.thermia_atlas_l1_energy'),
+            states('sensor.thermia_atlas_l2_energy'),
+            states('sensor.thermia_atlas_l3_energy'),
+          ] | map('int') | sum
+        }}
+      availability: >-
+        {{
+          [ states('sensor.thermia_atlas_l1_energy'),
+            states('sensor.thermia_atlas_l2_energy'),
+            states('sensor.thermia_atlas_l3_energy'),
+          ] | map('is_number') | min
+        }}
+      unit_of_measurement: kWh
+      device_class: energy
+      state_class: total_increasing

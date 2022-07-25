@@ -1,0 +1,83 @@
+- platform: template
+  sensors:
+    elpris_billigaste_timman:
+      value_template: >-
+          {% set x = states("sensor.time") %}
+          {% set l=state_attr('sensor.nordpool_kwh_se3_sek_3_10_025', 'raw_today')|sort(attribute='value') %}
+          {{ (now() >= l[0].start and now() <= l[0].end) }}
+    
+    elpris_billigaste_2_timmar:
+      value_template: >-
+          {% set x = states("sensor.time") %}
+          {% set l=state_attr('sensor.nordpool_kwh_se3_sek_3_10_025', 'raw_today')|sort(attribute='value') %}
+          {{ (now() >= l[0].start and now() <= l[0].end)
+            or (now() >= l[1].start and now() <= l[1].end) }}
+
+    elpris_billigaste_3_timmar:
+      value_template: >-
+          {% set x = states("sensor.time") %}
+          {% set l=state_attr('sensor.nordpool_kwh_se3_sek_3_10_025', 'raw_today')|sort(attribute='value') %}
+          {{ (now() >= l[0].start and now() <= l[0].end)
+            or (now() >= l[1].start and now() <= l[1].end)
+            or (now() >= l[2].start and now() <= l[2].end) }}
+
+    elpris_billigaste_4_timmar:
+      value_template: >-
+          {% set x = states("sensor.time") %}
+          {% set l=state_attr('sensor.nordpool_kwh_se3_sek_3_10_025', 'raw_today')|sort(attribute='value') %}
+          {{ (now() >= l[0].start and now() <= l[0].end)
+            or (now() >= l[1].start and now() <= l[1].end)
+            or (now() >= l[2].start and now() <= l[2].end)
+            or (now() >= l[3].start and now() <= l[3].end) }}
+
+    elpris_billigaste_5_timmar:
+      value_template: >-
+          {% set x = states("sensor.time") %}
+          {% set l=state_attr('sensor.nordpool_kwh_se3_sek_3_10_025', 'raw_today')|sort(attribute='value') %}
+          {{ (now() >= l[0].start and now() <= l[0].end)
+            or (now() >= l[1].start and now() <= l[1].end)
+            or (now() >= l[2].start and now() <= l[2].end)
+            or (now() >= l[3].start and now() <= l[3].end)
+            or (now() >= l[4].start and now() <= l[4].end) }}
+
+- platform: template
+  sensors:
+    elpris_billigaste_6_timmar:
+      value_template: >-
+        {% set l=state_attr('sensor.nordpool_kwh_se3_sek_3_10_025', 'raw_today')|sort(attribute='value') %}
+        {{ (now() >= l[0].start and now() <= l[0].end)
+          or (now() >= l[1].start and now() <= l[1].end)
+          or (now() >= l[2].start and now() <= l[2].end)
+          or (now() >= l[3].start and now() <= l[3].end) 
+          or (now() >= l[4].start and now() <= l[4].end) 
+          or (now() >= l[5].start and now() <= l[5].end) }}
+
+- platform: template
+  sensors:
+    elpris_medium_12_timmar:
+      value_template: >-
+        {% set l=state_attr('sensor.nordpool_kwh_se3_sek_3_10_025', 'raw_today')|sort(attribute='value') %}
+        {{ (now() >= l[6].start and now() <= l[6].end)
+          or (now() >= l[7].start and now() <= l[7].end)
+          or (now() >= l[8].start and now() <= l[8].end)
+          or (now() >= l[9].start and now() <= l[9].end) 
+          or (now() >= l[10].start and now() <= l[10].end) 
+          or (now() >= l[11].start and now() <= l[11].end) 
+          or (now() >= l[12].start and now() <= l[12].end)
+          or (now() >= l[13].start and now() <= l[13].end)
+          or (now() >= l[14].start and now() <= l[14].end) 
+          or (now() >= l[15].start and now() <= l[15].end) 
+          or (now() >= l[16].start and now() <= l[16].end) 
+          or (now() >= l[17].start and now() <= l[17].end) }}
+          
+- platform: template
+  sensors:
+    elpris_dyraste_6_timmar:
+      value_template: >-
+        {% set l=state_attr('sensor.nordpool_kwh_se3_sek_3_10_025', 'raw_today')|sort(attribute='value') %}
+        {{ (now() >= l[18].start and now() <= l[18].end)
+          or (now() >= l[19].start and now() <= l[19].end)
+          or (now() >= l[20].start and now() <= l[20].end)
+          or (now() >= l[21].start and now() <= l[21].end) 
+          or (now() >= l[22].start and now() <= l[22].end) 
+          or (now() >= l[23].start and now() <= l[23].end) }}
