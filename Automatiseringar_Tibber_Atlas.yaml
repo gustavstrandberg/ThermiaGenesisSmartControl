@@ -1,124 +1,13 @@
-alias: Värme - elpris Tibber - VERY_CHEAP
-description: ''
-trigger:
-  - platform: state
-    entity_id: sensor.electricity_price_polstjarnevagen_4
-    attribute: price_level
-    to: VERY_CHEAP
-condition: []
-action:
-  - service: climate.set_temperature
-    data:
-      temperature: 21
-    target:
-      entity_id: climate.heat
-  - service: climate.set_temperature
-    data:
-      target_temp_high: 60
-      target_temp_low: 50
-    target:
-      entity_id: climate.tap_water
-  - service: climate.set_temperature
-    data:
-      temperature: 27
-    target:
-      entity_id: climate.badrum_overvaning
-mode: single
-
-=========================================================
-alias: Värme - elpris Tibber - CHEAP
-description: ''
-trigger:
-  - platform: state
-    entity_id: sensor.electricity_price_polstjarnevagen_4
-    attribute: price_level
-    to: CHEAP
-condition: []
-action:
-  - service: climate.set_temperature
-    data:
-      temperature: 20
-    target:
-      entity_id: climate.heat
-  - service: climate.set_temperature
-    data:
-      target_temp_high: 60
-      target_temp_low: 50
-    target:
-      entity_id: climate.tap_water
-  - service: climate.set_temperature
-    data:
-      temperature: 25
-    target:
-      entity_id: climate.badrum_overvaning
-mode: single
-
-=========================================================
-alias: Värme - elpris Tibber - NORMAL
-description: ''
-trigger:
-  - platform: state
-    entity_id: sensor.electricity_price_polstjarnevagen_4
-    attribute: price_level
-    to: NORMAL
-condition: []
-action:
-  - service: climate.set_temperature
-    data:
-      temperature: 20
-    target:
-      entity_id: climate.heat
-  - service: climate.set_temperature
-    data:
-      target_temp_high: 60
-      target_temp_low: 50
-    target:
-      entity_id: climate.tap_water
-  - service: climate.set_temperature
-    data:
-      temperature: 25
-    target:
-      entity_id: climate.badrum_overvaning
-mode: single
-
-=========================================================
-alias: Värme - elpris Tibber - EXPENSIVE
-description: ''
-trigger:
-  - platform: state
-    entity_id: sensor.electricity_price_polstjarnevagen_4
-    attribute: price_level
-    to: EXPENSIVE
-condition: []
-action:
-  - service: climate.set_temperature
-    data:
-      temperature: 18
-    target:
-      entity_id: climate.heat
-  - service: climate.set_temperature
-    data:
-      target_temp_high: 40
-      target_temp_low: 50
-    target:
-      entity_id: climate.tap_water
-  - service: climate.set_temperature
-    data:
-      temperature: 20
-    target:
-      entity_id: climate.badrum_overvaning
-mode: single
-
-=========================================================
-alias: Värme - elpris Tibber - VERY_EXPENSIVE
-description: ''
-trigger:
+- id: '1637531285819'
+  alias: Värme - elpris Tibber - VERY_EXPENSIVE
+  description: ''
+  trigger:
   - platform: state
     entity_id: sensor.electricity_price_polstjarnevagen_4
     attribute: price_level
     to: VERY_EXPENSIVE
-condition: []
-action:
+  condition: []
+  action:
   - service: climate.set_temperature
     data:
       temperature: 17
@@ -135,4 +24,112 @@ action:
       temperature: 17
     target:
       entity_id: climate.badrum_overvaning
-mode: single
+  mode: single
+- id: '1637531777349'
+  alias: Värme - elpris Tibber - EXPENSIVE
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: sensor.electricity_price_polstjarnevagen_4
+    attribute: price_level
+    to: EXPENSIVE
+  condition: []
+  action:
+  - service: climate.set_temperature
+    data:
+      temperature: 18
+    target:
+      entity_id: climate.heat
+  - service: climate.set_temperature
+    data:
+      target_temp_high: 50
+      target_temp_low: 40
+    target:
+      entity_id: climate.tap_water
+  - service: climate.set_temperature
+    data:
+      temperature: 20
+    target:
+      entity_id: climate.badrum_overvaning
+  mode: single
+  - id: '1637587078704'
+  alias: Värme - elpris Tibber - VERY_CHEAP
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: sensor.electricity_price_polstjarnevagen_4
+    attribute: price_level
+    to: VERY_CHEAP
+  condition: []
+  action:
+  - service: climate.set_temperature
+    data:
+      temperature: 21
+    target:
+      entity_id: climate.heat
+  - service: climate.set_temperature
+    data:
+      target_temp_high: 60
+      target_temp_low: 50
+    target:
+      entity_id: climate.tap_water
+  - service: climate.set_temperature
+    data:
+      temperature: 27
+    target:
+      entity_id: climate.badrum_overvaning
+  mode: single
+- id: '1637587224668'
+  alias: Värme - elpris Tibber - CHEAP
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: sensor.electricity_price_polstjarnevagen_4
+    attribute: price_level
+    to: CHEAP
+  condition: []
+  action:
+  - service: climate.set_temperature
+    data:
+      temperature: 20
+    target:
+      entity_id: climate.heat
+  - service: climate.set_temperature
+    data:
+      target_temp_high: 60
+      target_temp_low: 50
+    target:
+      entity_id: climate.tap_water
+  - service: climate.set_temperature
+    data:
+      temperature: 25
+    target:
+      entity_id: climate.badrum_overvaning
+  mode: single
+- id: '1637587285772'
+  alias: Värme - elpris Tibber - NORMAL
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: sensor.electricity_price_polstjarnevagen_4
+    attribute: price_level
+    to: NORMAL
+  condition: []
+  action:
+  - service: climate.set_temperature
+    data:
+      temperature: 20
+    target:
+      entity_id: climate.heat
+  - service: climate.set_temperature
+    data:
+      target_temp_high: 60
+      target_temp_low: 50
+    target:
+      entity_id: climate.tap_water
+  - service: climate.set_temperature
+    data:
+      temperature: 25
+    target:
+      entity_id: climate.badrum_overvaning
+  mode: single
