@@ -1,3 +1,4 @@
+# Automations using Tibber as electricity price source.
 - id: '1637531285819'
   alias: Värme - elpris Tibber - VERY_EXPENSIVE
   description: ''
