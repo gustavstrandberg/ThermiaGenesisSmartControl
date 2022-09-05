@@ -1,3 +1,5 @@
+# Automations using NordPool as electricity price source.
+
 - id: '1646778171319'
   alias: Värme sänk vid högt elpris
   description: ''
