@@ -1,4 +1,5 @@
-# Sensors over Modbus TCP, not required for SmartControl
+# Sensors over Modbus TCP
+# Not required for SmartControl
 - type: tcp
   name: Thermia
   host: 192.168.x.x
