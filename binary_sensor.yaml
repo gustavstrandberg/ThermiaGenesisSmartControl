@@ -1,4 +1,5 @@
 # Required when using NordPool as electricity price source in the automations.
+
 - platform: template
   sensors:
     elpris_billigaste_timman:
