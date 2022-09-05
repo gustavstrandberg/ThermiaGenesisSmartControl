@@ -1,0 +1,68 @@
+# Sensors over modbus
+- type: tcp
+  name: Thermia
+  host: 192.168.x.x
+  port: 502
+  sensors:
+    - name: atlas_modbus_condenser_in_temperature
+      unit_of_measurement: °C
+      address: 8
+      input_type: input
+      scan_interval: 300
+      data_type: int16
+      scale: 0.01
+      precision: 1
+
+    - name: atlas_modbus_condenser_out_temperature
+      unit_of_measurement: °C
+      address: 9
+      input_type: input
+      scan_interval: 300
+      data_type: int16
+      scale: 0.01
+      precision: 1
+
+    - name: atlas_modbus_brine_in_temperature
+      unit_of_measurement: °C
+      address: 10
+      input_type: input
+      scan_interval: 300
+      data_type: int16
+      scale: 0.01
+      precision: 1
+
+    - name: atlas_modbus_brine_out_temperature
+      unit_of_measurement: °C
+      address: 11
+      input_type: input
+      scan_interval: 300
+      data_type: int16
+      scale: 0.01
+      precision: 1
+
+    - name: atlas_modbus_outdoor_temperature
+      unit_of_measurement: °C
+      address: 13
+      input_type: input
+      scan_interval: 300
+      data_type: int16
+      scale: 0.01
+      precision: 1
+
+    - name: atlas_modbus_tap_water_weighted_temperature
+      unit_of_measurement: °C
+      address: 17
+      input_type: input
+      scan_interval: 300
+      data_type: int16
+      scale: 0.01
+      precision: 1
+
+    - name: atlas_modbus_room_temperature
+      unit_of_measurement: °C
+      address: 121
+      input_type: input
+      scan_interval: 300
+      data_type: int16
+      scale: 0.1
+      precision: 1
