@@ -1,3 +1,6 @@
+# Used for power/energy measurement from Shelly 3EM. 
+# Not requiried for SmartControl.
+
 template:
   - sensor:
     - name: "Thermia Atlas Total Power"
