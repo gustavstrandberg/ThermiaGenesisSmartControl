@@ -1,4 +1,5 @@
 # Automations using Tibber as electricity price source.
+# climate.tap_water only has effect when tap water is set to normal mode.
 - id: '1637531285819'
   alias: Värme - elpris Tibber - VERY_EXPENSIVE
   description: ''
