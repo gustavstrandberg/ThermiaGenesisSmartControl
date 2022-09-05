@@ -1,5 +1,6 @@
 # Dashboard, displays sensors.
 # Not required for SmartControl
+
 elements:
   - entity: binary_sensor.compressor_control_signal
     style:
