@@ -1,0 +1,73 @@
+elements:
+  - entity: binary_sensor.compressor_control_signal
+    style:
+      left: 36%
+      top: 60%
+    type: state-icon
+  - entity: binary_sensor.mix_valve_1_circulation_pump_control_signal
+    style:
+      left: 77%
+      top: 36%
+    type: state-icon
+  - entity: sensor.condenser_in_temperature
+    style:
+      left: 64%
+      top: 13%
+    type: state-label
+  - entity: sensor.condenser_out_temperature
+    style:
+      left: 64%
+      top: 23%
+    type: state-label
+  - entity: sensor.condenser_out_temperature
+    style:
+      left: 69%
+      top: 66%
+    type: state-label
+  - entity: sensor.condenser_in_temperature
+    style:
+      left: 69%
+      top: 81%
+    type: state-label
+  - entity: sensor.brine_in_temperature
+    style:
+      left: 15%
+      top: 57%
+    type: state-label
+  - entity: sensor.brine_out_temperature
+    style:
+      left: 15%
+      top: 80%
+    type: state-label
+  - entity: sensor.tap_water_top_temperature
+    style:
+      left: 87%
+      top: 57%
+    type: state-label
+  - entity: sensor.discharge_pipe_temperature
+    style:
+      left: 47%
+      top: 57%
+    type: state-label
+  - entity: sensor.liquid_line_temperature
+    style:
+      left: 47%
+      top: 80%
+    type: state-label
+  - entity: sensor.room_temperature_sensor
+    style:
+      left: 19%
+      top: 39%
+    type: state-label
+  - entity: sensor.outdoor_temperature
+    style:
+      left: 8%
+      top: 20%
+    type: state-label
+  - entity: sensor.internal_additional_heater_current_step
+    style:
+      left: 57%
+      top: 43%
+    type: state-label
+image: http://husdata.se/img/BV_2_HA.png
+type: picture-elements
