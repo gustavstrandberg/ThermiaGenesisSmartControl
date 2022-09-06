@@ -27,8 +27,8 @@
       entity_id: climate.badrum_overvaning
   - service: climate.set_temperature
     data:
-      target_temp_high: 40
-      target_temp_low: 35
+      target_temp_high: 50
+      target_temp_low: 38
     target:
       entity_id: climate.tap_water
     enabled: false
@@ -50,7 +50,7 @@
   - service: climate.set_temperature
     data:
       target_temp_high: 60
-      target_temp_low: 50
+      target_temp_low: 40
     target:
       entity_id: climate.tap_water
     enabled: false
