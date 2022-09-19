@@ -20,7 +20,7 @@ template:
           ] | map('is_number') | min
         }}
       unit_of_measurement: W
-      device_class: energy
+      device_class: power
       state_class: measurement
 
     - name: "Thermia Atlas Total Energy"
