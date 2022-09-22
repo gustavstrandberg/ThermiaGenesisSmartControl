@@ -42,3 +42,9 @@ template:
       unit_of_measurement: kWh
       device_class: energy
       state_class: total_increasing
+
+# Include for binary_sensor used for Nordpool automation
+binary_sensor: !include binary_sensor.yaml
+
+# Include for modbus sensors, not required for automations.
+modbus: !include modbus.yaml
