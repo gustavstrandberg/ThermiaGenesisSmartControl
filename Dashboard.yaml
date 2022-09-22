@@ -74,4 +74,5 @@ elements:
       top: 43%
     type: state-label
 image: http://husdata.se/img/BV_2_HA.png
+#image: http://husdata.se/img/BV_3_HA.png
 type: picture-elements
