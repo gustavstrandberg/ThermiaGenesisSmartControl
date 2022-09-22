@@ -2,6 +2,8 @@
 # Type "picture-elements"
 # Not required for SmartControl
 
+# Modified from https://varmepump.one/docs/h60-manual/home-assistant-integration/dashboard-example/
+
 elements:
   - entity: binary_sensor.compressor_control_signal
     style:
